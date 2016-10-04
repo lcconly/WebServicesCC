@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:DeliveryOrder xmlns:tns="http://www.example.org/cheng_liu_assignment1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/cheng_liu_assignment1 cheng_liu_assignment1.xsd ">
+  <tns:Depot>
+    <tns:CountryName>Dublin</tns:CountryName>
+  </tns:Depot>
+  <tns:CustomerDetails>
+    <tns:FirstName>cheng</tns:FirstName>
+    <tns:Surname>liu</tns:Surname>
+    <tns:AdressLine1>Stillorgan rd</tns:AdressLine1>
+    <tns:AdressLine2>Belfield</tns:AdressLine2>
+    <tns:AdressLine3></tns:AdressLine3>
+    <tns:Country>
+      <tns:CountryName>Dublin</tns:CountryName>
+    </tns:Country>
+  </tns:CustomerDetails>
+  <tns:Items>
+    <tns:Quanlity>1</tns:Quanlity>
+    <tns:ItemDescriptions>Regular Milk</tns:ItemDescriptions>
+  </tns:Items>
+  <tns:Items>
+    <tns:Quanlity>1</tns:Quanlity>
+    <tns:ItemDescriptions>Raspberry Yoghurt</tns:ItemDescriptions>
+  </tns:Items>
+  <tns:Items>
+    <tns:Quanlity>1</tns:Quanlity>
+    <tns:ItemDescriptions>Regular Milk</tns:ItemDescriptions>
+  </tns:Items>  
+  <tns:DeliveryDay>Tuesday</tns:DeliveryDay>
+  <tns:DeliveryDay>Wednesday</tns:DeliveryDay>
+</tns:DeliveryOrder>

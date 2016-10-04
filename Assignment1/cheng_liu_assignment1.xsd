@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/cheng_liu_assignment1" xmlns:tns="http://www.example.org/cheng_liu_assignment1" elementFormDefault="qualified">
+
+    <element name="DeliveryOrder" type="tns:DeliveryOrderType"></element>
+
+    <complexType name="DeliveryOrderType">
+    	<sequence>
+    		<element name="Depot" maxOccurs="1" minOccurs="1"
+    			type="tns:DepotType">
+    		</element>
+    		<element name="CustomerDetails"
+    			type="tns:CustomerDetailsType" maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="Items" type="tns:ItemType"
+    			maxOccurs="unbounded" minOccurs="1">
+    		</element>
+    		<element name="DeliveryDay" maxOccurs="unbounded" minOccurs="1">
+    			<simpleType>
+    				<restriction base="string">
+    					<enumeration value="Monday"></enumeration>
+    					<enumeration value="Tuesday"></enumeration>
+    					<enumeration value="Wednesday"></enumeration>
+    					<enumeration value="Thursday"></enumeration>
+    					<enumeration value="Friday"></enumeration>
+    				</restriction>
+    			</simpleType>
+    		</element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="CustomerDetailsType">
+    	<sequence>
+    		<element name="FirstName">
+    			<simpleType>
+    				<restriction base="string">
+    					<pattern value="\w{2,}"></pattern>
+    				</restriction>
+    			</simpleType>
+    		</element>
+    		<element name="Surname">
+    			<simpleType>
+    				<restriction base="string">
+    					<pattern value="\w{2,}"></pattern>
+    				</restriction>
+    			</simpleType>
+    		</element>
+    		<element name="AdressLine1">
+    			<simpleType>
+    				<restriction base="string">
+    					<minLength value="4"></minLength>
+    				</restriction>
+    			</simpleType>
+    		</element>
+    		<element name="AdressLine2">
+    			<simpleType>
+    				<restriction base="string">
+    					<minLength value="4"></minLength>
+    				</restriction>
+    			</simpleType>
+    		</element>
+    		<element name="AdressLine3">
+    			<simpleType>
+    				<restriction base="string">
+    					<minLength value="0"></minLength>
+    				</restriction>
+    			</simpleType>
+    		</element>
+    		<element name="Country" type="tns:DepotType"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="DepotType">
+    	<sequence>
+    		<element name="CountryName">
+    			<simpleType>
+    				<restriction base="string">
+    					<enumeration value="Dublin"></enumeration>
+    					<enumeration value="Cork"></enumeration>
+    					<enumeration value="Kildare"></enumeration>
+    					<enumeration value="Limerick"></enumeration>
+    					<enumeration value="Waterford"></enumeration>
+    					<enumeration value="Wicklow"></enumeration>
+    				</restriction>
+    			</simpleType>
+    		</element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="ItemType">
+    	<sequence>
+    		<element name="Quanlity" type="positiveInteger"></element>
+    		<element name="ItemDescriptions">
+    			<simpleType>
+    				<restriction base="string">
+    					<enumeration value="Regular Milk"></enumeration>
+    					<enumeration value="Low Fat Milk"></enumeration>
+    					<enumeration value="Strawberry Yoghurt"></enumeration>
+    					<enumeration value="Raspberry Yoghurt"></enumeration>
+    					<enumeration value="125ml Cream"></enumeration>
+    					<enumeration value="250ml Cream"></enumeration>
+    				</restriction>
+    			</simpleType>
+    		</element>
+    	</sequence>
+    </complexType>
+</schema>
